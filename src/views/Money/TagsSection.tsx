@@ -49,7 +49,7 @@ const TagsSection: React.FC = () => {
         const index = selectedTags.indexOf(tag);
         if (index >= 0) {
             setSelectedTags(selectedTags.filter(t => t !== tag));
-            //如果tag已被选中，就复制所有没有选中的tag，作为新的selectedTag
+            //如果tag已被选中，就复制所有没有点击但已选中的tag，作为新的selectedTag
         } else {
             setSelectedTags([...selectedTags, tag]);
         }
