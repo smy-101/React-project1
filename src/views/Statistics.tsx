@@ -1,6 +1,12 @@
 import React from 'react';
+import {Layout} from '../components/Layout';
 
 function Statistics() {
-    return <h2>统计</h2>;
+    return (
+        <Layout>
+            <h2>统计</h2>
+        </Layout>
+    );
 }
-export {Statistics}
+
+export {Statistics};

@@ -1,7 +1,12 @@
 import React from 'react';
+import {Layout} from '../components/Layout';
 
 function Tags() {
-    return <h2>标签</h2>;
+    return (
+        <Layout>
+            <h2>标签</h2>
+        </Layout>
+    );
 }
 
-export {Tags}
+export {Tags};
