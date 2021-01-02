@@ -27,7 +27,7 @@ const Wrapper = styled.section`
     }
   }
 `;
-const CategorySection = () => {
+const CategorySection:React.FC = () => {
     const [category,setCategory] = useState('-');
     const [categoryList] = useState<('-'|'+')[]>(['-','+']);
     const categoryMap = {'-':'支出','+':'收入'};
@@ -35,7 +35,8 @@ const CategorySection = () => {
         <Wrapper>
             <ul>
                 {categoryList.map(c=>
-                    <li className={category===c ? 'selected' : ''}
+                    <li key={c}
+                        className={category===c ? 'selected' : ''}
                     onClick={()=>{setCategory(c);}}
                     >{categoryMap[c]}</li>
                 )}
